@@ -5,18 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Transaction extends Model
+class Review extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'type',
-        'card_number',
-        'status',
-        'payment_id'
+        'object_id',
+        'rating',
+        'user_id',
+        'comment',
     ];
 
     protected $casts = [
         'type' => 'integer',
-        'status' => 'integer',
+        'object_id' => 'integer',
+        'rating' => 'integer',
+        'user_id' => 'integer',
     ];
+
 }

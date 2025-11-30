@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transactions', function (Blueprint $table) {
+        Schema::create('review', function (Blueprint $table) {
             $table->id();
             $table->integer('type')->nullable(false);
-            $table->integer('payment_id')->nullable(false); // вместе с type - полиморфный ключ
-            $table->string('card_number')->nullable(false);
-            $table->integer('status')->nullable(false);
+            $table->integer('object_id');
+            $table->integer('rating');
+            $table->integer('user_id');
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('transactions');
+        Schema::dropIfExists('review');
     }
 };
