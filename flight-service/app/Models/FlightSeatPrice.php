@@ -10,6 +10,8 @@ class FlightSeatPrice extends Model
 {
     use HasFactory;
 
+    protected $table = 'flight_seat_prices';
+
     protected $fillable = [
         'flight_seat_id',
         'date',

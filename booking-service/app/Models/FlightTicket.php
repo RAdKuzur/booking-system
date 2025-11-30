@@ -10,6 +10,8 @@ class FlightTicket extends Model
 {
     use HasFactory;
 
+    protected $table = 'flight_tickets';
+
     protected $fillable = [
         'booking_id',
         'flight_seat_id',

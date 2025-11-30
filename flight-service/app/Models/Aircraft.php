@@ -10,6 +10,8 @@ class Aircraft extends Model
 {
     use HasFactory;
 
+    protected $table = 'aircrafts';
+
     protected $fillable = [
         'name',
         'seats',

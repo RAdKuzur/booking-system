@@ -10,6 +10,8 @@ class RoomPrice extends Model
 {
     use HasFactory;
 
+    protected $table = 'room_prices';
+
     protected $fillable = [
         'price',
         'room_id',

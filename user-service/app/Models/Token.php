@@ -10,6 +10,8 @@ class Token extends Model
 {
     use HasFactory;
 
+    protected $table = 'tokens';
+
     protected $fillable = [
         'refresh_token',
         'expires_at',

@@ -11,6 +11,8 @@ class Seat extends Model
 {
     use HasFactory;
 
+    protected $table = 'seats';
+
     protected $fillable = [
         'plane_id',
         'number',

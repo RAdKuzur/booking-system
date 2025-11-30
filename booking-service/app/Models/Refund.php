@@ -9,6 +9,8 @@ class Refund extends Model
 {
     use HasFactory;
 
+    protected $table = 'refunds';
+
     protected $fillable = [
         'type',
         'ticket_id',

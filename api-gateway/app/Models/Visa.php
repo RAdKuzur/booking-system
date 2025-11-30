@@ -10,6 +10,8 @@ class Visa extends Model
 {
     use HasFactory;
 
+    protected $table = 'visas';
+
     protected $fillable = [
         'first_country_id',
         'second_country_id',

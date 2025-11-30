@@ -10,6 +10,8 @@ class HotelTicket extends Model
 {
     use HasFactory;
 
+    protected $table = 'hotel_tickets';
+
     protected $fillable = [
         'booking_id',
         'room_id',
